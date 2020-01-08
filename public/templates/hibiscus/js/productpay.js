@@ -68,9 +68,9 @@
 								} 
 							  });
 							  //3秒后自动跳转
-								setTimeout(function(){
-									location.href = res.data.url;
-								},3000);
+								// setTimeout(function(){
+								// 	location.href = res.data.url;
+								// },3000);
 							  
 						}else{
 							if(res.data.overtime>0){
@@ -95,9 +95,9 @@
 							
 							if(res.data.subjump>0 && (device.android || device.ios)){
 								if(!device.weixin){
-									setTimeout(function(){
-										window.location.href = res.data.subjumpurl;
-									},2000);
+									// setTimeout(function(){
+									// 	window.location.href = res.data.subjumpurl;
+									// },2000);
 								}
 							}
 							
