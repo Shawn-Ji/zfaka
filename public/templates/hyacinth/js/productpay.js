@@ -1,4 +1,6 @@
-﻿layui.define(['layer', 'form'], function(exports){
+﻿// /opt/zfaka/code/public/templates/hyacinth/js
+// line71  97 行 注释2个自动跳转
+layui.define(['layer', 'form'], function(exports){
 	var $ = layui.jquery;
 	var layer = layui.layer;
 	var device = layui.device();
@@ -8,7 +10,7 @@
 	var queryRadio = 1;
 	var lodding;
 	console.log("注意：本页js用的比较多，请小心谨慎!");
-	
+
 	$('.orderpaymethod').on('click', function(event) {
 		event.preventDefault();
 		var paymethod = $(this).attr("data-type");
@@ -62,16 +64,16 @@
 								,yes: function(){
 									clearInterval(myTimer);
 								}
-								,cancel: function(){ 
+								,cancel: function(){
 								   queryRadio = 0;
 								   clearInterval(myTimer);
-								} 
+								}
 							  });
-							  //3秒后自动跳转
-								setTimeout(function(){
-									location.href = res.data.url;
-								},3000);
-							  
+						//3秒后自动跳转
+						// setTimeout(function(){
+						// 	location.href = res.data.url;
+						// },3000);
+
 						}else{
 							if(res.data.overtime>0){
 								timer(res.data.overtime,paymethod);
@@ -92,15 +94,15 @@
 								html += '<div class="money-item">订单金额：<strong>'+res.data.money+'</strong></div>';
 								html +='<div id="time-item" class="time-item"><hr><p>请使用手机'+res.data.payname+'扫一扫</p><p>扫描二维码完成支付</p></div></div>';
 							}
-							
+
 							if(res.data.subjump>0 && (device.android || device.ios)){
 								if(!device.weixin){
-									setTimeout(function(){
-										window.location.href = res.data.subjumpurl;
-									},2000);
+								// setTimeout(function(){
+								// 	window.location.href = res.data.subjumpurl;
+								// },2000);
 								}
 							}
-							
+
 							layer.open({
 								type: 1
 								,title: false
@@ -115,10 +117,10 @@
 									queryRadio = 0;
 									clearInterval(myTimer);
 								}
-								,cancel: function(){ 
+								,cancel: function(){
 								   queryRadio = 0;
 								   clearInterval(myTimer);
-								} 
+								}
 							});
 						}
 						queryPay();

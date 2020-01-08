@@ -1,3 +1,5 @@
+// /opt/zfaka/code/public/templates/hyacinth/js
+// line43 突出点我提取卡密
 layui.define(['layer', 'form','jquery','base64','laytpl','element'], function(exports){
 	var $ = layui.jquery;
 	var layer = layui.layer;
@@ -39,7 +41,7 @@ layui.define(['layer', 'form','jquery','base64','laytpl','element'], function(ex
 				break;
 			case '2':
 				str = '<span class="layui-badge layui-bg-green">已完成</span>';
-				str += ' <button class="view_kami layui-btn layui-btn-warm layui-btn-xs" data-orderid="'+data.orderid+'">提取卡密</button>';
+				str += ' <br/><button class="view_kami layui-btn layui-btn-danger layui-btn-xs" data-orderid="'+data.orderid+'">点我提取卡密</button>';
 				break;
 			default:
 				str = '<span class="layui-badge layui-bg-black">处理失败</span>';

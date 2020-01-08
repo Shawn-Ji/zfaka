@@ -6,6 +6,13 @@
 
 >永久免费、绝对开源，不支持特殊定制，欢迎提供各种需求和意见与建议。
 
+数据库插入一个支付
+```
+INSERT INTO `t_payment`( `payment`, `payname`, `payimage`, `alias`, `sign_type`) VALUES 
+('易支付微信', '微信支付', '/res/images/pay/weixin.jpg', 'alpaywxpay', 'MD5');
+```
+
+
 
 # 一、系统介绍
 >包含自动/手工发卡功能，有会员中心和后台中心。
