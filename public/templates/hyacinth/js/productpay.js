@@ -84,7 +84,7 @@ layui.define(['layer', 'form'], function(exports){
 								}
 								html += '<div class="money-item">订单金额：<strong>'+res.data.money+'</strong></div>';
 								html +='<div id="time-item_'+paymethod+'" class="time-item"><strong id="hour_show_'+paymethod+'"><s id="h"></s>0时</strong><strong id="minute_show_'+paymethod+'"><s></s>05分</strong><strong id="second_show_'+paymethod+'"><s></s>00秒</strong>';
-								html +='<hr><p>请使用手机'+res.data.payname+'扫一扫</p><p>扫描二维码完成支付</p></div></div>';
+								html +='<hr><p>请截图后使用'+res.data.payname+'扫一扫</p><p>并保持本页面打开,支付后回到本页面</p></div></div>';
 							}else{
 								if(res.data.subjump>0){
 									var html = '<h1 class="mod-title"><span class="ico_log ico-'+paymethod+'"></span></h1><div class="mod-content" style="text-align: center;"><a href="'+res.data.subjumpurl+'" target="_blank"><img id="pay_qrcode" src="'+res.data.qr+'" alt="'+res.data.payname+'" width="230" height="230"></a>';
@@ -92,7 +92,7 @@ layui.define(['layer', 'form'], function(exports){
 									var html = '<h1 class="mod-title"><span class="ico_log ico-'+paymethod+'"></span></h1><div class="mod-content" style="text-align: center;"><img id="pay_qrcode" src="'+res.data.qr+'" alt="'+res.data.payname+'" width="230" height="230">';
 								}
 								html += '<div class="money-item">订单金额：<strong>'+res.data.money+'</strong></div>';
-								html +='<div id="time-item" class="time-item"><hr><p>请使用手机'+res.data.payname+'扫一扫</p><p>扫描二维码完成支付</p></div></div>';
+								html +='<div id="time-item" class="time-item"><hr><p>请截图后使用'+res.data.payname+'扫一扫</p><p>并保持本页面打开,支付后回到本页面</p></div></div>';
 							}
 
 							if(res.data.subjump>0 && (device.android || device.ios)){
